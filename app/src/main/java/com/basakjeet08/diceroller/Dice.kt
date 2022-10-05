@@ -14,11 +14,11 @@ class Dice(sides:Int) {
     private val diceRange = 1..sides
 
     //This function Sets the Image according to the Random Rolled Number and returns the Random Number
-    fun roll(image:ImageView) : Int{
+    fun roll(image:ImageView?) : Int{
         val number = diceRange.random()
 
         // image is Set According to the Random Number
-        image.setImageResource(when(number){
+        image?.setImageResource(when(number){
             1 -> dice1
             2 -> dice2
             3 -> dice3
